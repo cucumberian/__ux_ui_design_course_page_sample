@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.colors {
+    --text-white: #fff;
+    --midnight-green: #3C7A7A;
+    --dark-cyan: #3FA8A8;
+    --auburn: #AC2929;
+    --indian-red: #E7595E;
+    --background-color: #2C2C2C;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-white);
+    font-family: Roboto;
+    overflow: hidden;
+}
+
+.header {
+    height: 30px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 124px;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.header-menu-item > a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 120%;
+}
+.header-menu-item > a:hover {
+    border-bottom: 2px solid var(--text-white);
+}
+
+.section-title {
+    padding-top: 255px;
+    padding-bottom: 70px;
+    position: relative;
+}
+.abstract-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: grid;
+    grid-template-areas: 
+    "a1 a2 a3 a4"
+    "a5 a6 a7 a8"
+    "a9 a10 a11 a12"
+    "a13 a14 a15 a16";
+    grid-template-columns: repeat(4, 128px);
+    grid-template-rows: repeat(4, 128px);
+}
+.abstract-element {
+    transition-duration: 0.6s;
+}
+.abstract-element:hover {
+    transform: scaleX(-100%);
+    transition-duration: 0.6s;
+}
+.abs-2 {
+    background-color: var(--dark-cyan);
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    grid-area: a2;
+}
+.abs-3 {
+    background-color: var(--indian-red);
+    width: 128px;
+    height: 128px;
+    border-radius: 0 64px 0 64px;
+    grid-area: a3;
+}
+.abs-4 {
+    background-color: var(--dark-cyan);
+    width: 128px;
+    height: 128px;
+    border-radius: 100px 100px 100px 0;
+    grid-area: a4;
+}
+.abs-6-7 {
+    background-color: var(--midnight-green);
+    width: 256px;
+    height: 128px;
+    border-radius: 100px 100px 100px 0;
+    grid-area: a6;
+}
+.abs-8 {
+    background-color: var(--indian-red);
+    width: 128px;
+    height: 128px;
+    border-radius: 0 100px 0 100px;
+    grid-area: a8;
+}
+.abs-11 {
+    background-color: var(--auburn);
+    width: 128px;
+    height: 128px;
+    border-radius: 100px 0 100px 100px;
+    grid-area: a11;
+}
+.abs-12 {
+    background-color: var(--midnight-green);
+    width: 128px;
+    height: 256px;
+    border-radius: 0 64px 64px 64px;
+    grid-area: a12;
+}
+
+.title-small-text {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.title-text {
+    max-width: 866px;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 120%;
+}
+.title-decoration {
+    width: 694px;
+    height: 27px;
+    position: relative;
+    left: -25px;
+    bottom: 24px;
+    background-color: var(--dark-cyan);
+    z-index: -1;
+    border-radius: 90px 0 90px 0;
+}
+
+.section-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.features-items {
+    display: grid;
+    grid-template-columns: 156px 156px calc(78px*4);
+    gap: 24px;
+}
+.feature-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 10px;
+}
+.feature-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 120%;
+    max-width: calc(156px + 24px);
+}
+.feature-portraits {
+    display: flex;
+}
+.feature-portrait-container {
+    width: 40px;
+}
+.feature-portrait {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 2px white solid;
+}
+
+.features-link {
+    display: flex;
+    align-items: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.features-link:hover {
+    transform: scale(1.1) translateX(10px);
+    transition-duration: 0.3s;
+}
+.features-link-text {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.background-blur-1 {
+    width: 558px;
+    height: 558px;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: -250px;
+    right: -250px;
+    background-color: var(--dark-cyan);
+    filter: blur(200px);
+}
+.background-blur-2 {
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    right: -150px;
+    top: 160px;
+    background-color: var(--indian-red);
+    filter: blur(200px);
+}
+.background-blur-3 {
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    left: -300px;
+    top: 160px;
+    background-color: var(--dark-cyan);
+    filter: blur(200px);
+}
+.background-blur-4 {
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    z-index: -2;
+    position: absolute;
+    left: -120px;
+    top: 410px;
+    background-color: var(--indian-red);
+    filter: blur(200px);
+}
